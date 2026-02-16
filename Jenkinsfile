@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    test -f index.html
+                    test -f public/index.html
                 '''
             }
         }
