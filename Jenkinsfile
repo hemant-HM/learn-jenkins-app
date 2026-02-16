@@ -19,12 +19,12 @@ pipeline {
                     ls -la
                 '''
             }
-            stage('Test') {
-                steps {
-                    sh '''
-                        test -f index.html
-                    '''
-                }
+        }
+        stage('Test') {
+            steps {
+                sh '''
+                    test -f index.html
+                '''
             }
         }
     }
