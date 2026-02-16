@@ -28,14 +28,7 @@ pipeline {
                 '''
             }
         }
-    }
-    post {
-        always {
-            junit 'test-results/junit.xml'
-        }
-    }
-
-    stage('E2E') {
+        stage('E2E') {
             steps {
                 sh '''
                     npm install serve
@@ -44,4 +37,10 @@ pipeline {
                 '''
             }
         }
+    }
+    post {
+        always {
+            junit 'test-results/junit.xml'
+        }
+    }
 }
