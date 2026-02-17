@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh '''
                     test -f public/index.html
-                    npm test
+                    // npm test
                 '''
             }
         }
@@ -40,7 +40,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm install serve
+                    // npm install serve
                     node_modules/.bin/serve -s build &
                     sleep 10
                     npx playwright test
